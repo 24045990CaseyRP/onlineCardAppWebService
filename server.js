@@ -10,7 +10,8 @@ const allowedOrigins = [
   "http://localhost:3000",
   "https://card-app-smoky.vercel.app",
   "https://onlinecardappwebservice-tmj4.onrender.com",
-  "https://card-app-starter-supateam-onpjeb2h3-caseys-projects-b1ab35b8.vercel.app"
+  "https://card-app-starter-supateam-igtlsjdyw-caseys-projects-b1ab35b8.vercel.app",
+  
 ];
 
 app.use(
