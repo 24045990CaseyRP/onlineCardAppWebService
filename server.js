@@ -4,7 +4,30 @@ require('dotenv').config();
 
 const app = express();
 const port = 3000;
+const cors = require("cors");
 
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://card-app-smoky.vercel.app",
+  "https://onlinecardappwebservice-tmj4.onrender.com"
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // allow requests with no origin (Postman/server-to-server)
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error("Not allowed by CORS"));
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: false,
+  })
+);
 // 1. Create a Connection Pool based on your DBConfig
 // This is more efficient than creating a new connection for every request
 const pool = mysql.createPool({

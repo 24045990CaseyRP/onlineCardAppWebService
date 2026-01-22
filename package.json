@@ -1,7 +1,7 @@
 {
   "name": "onlinecardappwebservice",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
+    "expo": "^54.0.31",
     "express": "^5.2.1",
     "mysql2": "^3.16.0"
   }
