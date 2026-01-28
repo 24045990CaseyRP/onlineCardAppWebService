@@ -8,11 +8,8 @@ const cors = require("cors");
 
 const allowedOrigins = [
     "http://localhost:3000",
-    "https://card-app-smoky.vercel.app",
     "https://onlinecardappwebservice-tmj4.onrender.com",
     "https://card-app-starter-supateam.vercel.app",
-    "https://card-app-starter-supateam-git-main-caseys-projects-b1ab35b8.vercel.app/",
-    "https://card-app-starter-supateam-7ai8lk2cz-caseys-projects-b1ab35b8.vercel.app/"
 ];
 
 app.use(
